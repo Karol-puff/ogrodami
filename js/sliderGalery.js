@@ -37,10 +37,18 @@ function setSizes() {
     }
 }
 
+function indicatorPosition() {
+    if (!checkIsMobile()) {
+        $('#carouselIndicator').css('bottom', (getScreenHeight()/10).toString() + 'px');
+    }
+}
+
 window.onload = function() {
     setSizes();
+    indicatorPosition()
 }
 
 window.onresize = function() {
     setSizes();
+    indicatorPosition();
 }
